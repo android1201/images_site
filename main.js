@@ -2584,11 +2584,13 @@ if(page > pageArr.length) {
   page = pageArr.length;
 }
 page = page -1;
+var p = 0;
 for (var src of pageArr[page]) {
+  p+=1;
 	var d23 = document;
 	var div = d23.createElement('div');
 	div.id = 'imgbox';
-	var data = `<a href="${src}"><img src="${src}"/><div id="nav">${pageArr.length}</div></a>`;
+	var data = `<object data="${src}"></object><div id="nav"><ul><a  href="${src}"><li><ion-icon name="share-alt"></ion-icon></li></a><li><ion-icon name="link"></ion-icon></li><a href="/download?id=${page}&file=${p}" target="_blank"><li><ion-icon name="cloud-download"></ion-icon></li></a></ul></div>`;
 	div.innerHTML = data;
 	var box = d23.getElementById('box');
 	box.appendChild(div);

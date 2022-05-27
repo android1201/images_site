@@ -7,44 +7,58 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #5e5e5e;
 }
 #box {
-  height: 97%;
-  width: 97%;
-  background: #dbd6d3;
+  height: 90%;
+  width: 95%;
+  background: #adadad;
+  overflow-x: auto;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px #ccc3be;
-  overflow-y: auto;
+  box-shadow: 0px 0px 15px #c2c0eb;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
-  gap: 10px;
+}
+object {
+  height: 80%;
+  width: 96%;
+  margin-top: 5px;
+  border-radius: 10px;
 }
 #imgbox {
-	height: 40%;
-	width: 97%;
-	background: #aba9a9;
-	border-radius: 5px;
-	
-}
-a {
-	height: 100%;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  height: 40%;
+  width: 96%;
+  background: #e7f0bd;
+  border-radius: 10px;
+  display: flex;
   flex-direction: column;
-  gap: 5px;
-}
-img {
-	height: 75%;
-	width: 97%;
-	border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  gap: 3px;
 }
 #nav {
-	width: 97%;
-  height: 18%;
-	border-radius: 10px;
-  background: white;
-  box-shadow: 0px 0px 5px white;
+  background: #e1f7f5;
+  height: 17%;
+  width: 96%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+ul {
+  list-style: none;
+  width: 98%;
+  height: 98%;
+  border: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+li {
+  float: left;
+}
+ion-icon {
+  font-size: 1.45em;
 }
