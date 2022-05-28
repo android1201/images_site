@@ -2973,9 +2973,9 @@ var cat = [
 let imgreg = /(.jpg|.png)$/gi;
 let newcat = [];
 for(var n of cat) {
-    if(imgreg.test(n)) {
+    //if(imgreg.test(n)) {
          newcat.push(n);
-    }
+    //}
 }
 var maincat = [];
 for(var i = 0; i <= newcat.length; i+=10) {
