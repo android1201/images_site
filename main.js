@@ -2994,7 +2994,6 @@ for(var i = 0; i <= img.database.length; i+=10) {
    pageArr.push(da);
 };
 pageArr = pageArr.concat(maincat);
-console.log(pageArr)
 if(page < 1) {
     page = 1;
 }
