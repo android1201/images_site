@@ -2567,6 +2567,7 @@ var img = {
     "https://cdn.discordapp.com/attachments/399416520297676801/459957139113377792/8461809.gif"
   ]
 };
+
 var url = new URL(window.location.href);
 var page = parseInt(url.searchParams.get('page'));
 if(!page) {
@@ -2577,6 +2578,7 @@ for(var i = 0; i <= img.database.length; i+=10) {
    let da = img.database.slice(i, i+10);
    pageArr.push(da);
 };
+
 if(page < 1) {
     page = 1;
 }
@@ -2590,7 +2592,7 @@ for (var src of pageArr[page]) {
 	var d23 = document;
 	var div = d23.createElement('div');
 	div.id = 'imgbox';
-	var data = `<object data="${src}"></object><div id="nav"><ul><a  href="${src}"><li><ion-icon name="share-alt"></ion-icon></li></a><li><ion-icon name="link"></ion-icon></li><a href="/download?id=${page}&file=${p}" target="_blank"><li><ion-icon name="cloud-download"></ion-icon></li></a></ul></div>`;
+	var data = `<object data="${src}"></object><div id="nav"><ul><a  href="${src}"><li><ion-icon name="share-alt"></ion-icon></li></a><li><ion-icon name="link"></ion-icon></li><a href="/download/${page}/${p}" target="_blank"><li><ion-icon name="cloud-download"></ion-icon></li></a></ul></div>`;
 	div.innerHTML = data;
 	var box = d23.getElementById('box');
 	box.appendChild(div);
