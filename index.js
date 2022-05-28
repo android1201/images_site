@@ -1,7 +1,7 @@
 const express = require('express'),
   app = express();
 
-app.listen(9866, () => {
+app.listen(9646, () => {
   console.log('dirty site is ready.....')
 })
 app.use(express.static('./'));
@@ -18,7 +18,7 @@ app.get('/download/:id/:page', (req, res) => {
   }
   var form = url.split('.')[-1];
   res.set({
-    'Content-Disposition': `attachment; filename=${id}${file}.${form}`
+    'Content-Disposition': `attachment; filename=${id}_${file}.${form}`
   });
   download.get(url, (f) => {
     f.pipe(res);

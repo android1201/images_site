@@ -1,6 +1,17 @@
 var img = {
   "database": [
-    "https://cdn.discordapp.com/attachments/399416520297676801/844911893793472522/qm0b29l7gy651.gif",
+  
+"https://upload.wikimedia.org/wikipedia/commons/3/32/House_sparrow04.jpg",
+"https://upload.wikimedia.org/wikipedia/commons/3/32/House_sparrow04.jpg",
+"https://files.allaboutbirds.net/wp-content/themes/html5blank-stable/images/blue-winged-warbler.jpg",
+"https://d2kwjcq8j5htsz.cloudfront.net/2017/09/13152014/cockatiel-shutterstock_570271666.jpg",
+"https://media.boingboing.net/wp-content/uploads/2018/03/Ossi-Saarinen-01.jpg",
+"http://www.birdsandblooms.com/wp-content/uploads/2018/04/painted-bunting-gilberto-sanchez-600x397.jpg",
+"http://www.birdsandblooms.com/wp-content/uploads/2015/02/BBam15_RebeccaGranger.jpg",
+"https://i.pinimg.com/736x/b6/3b/2a/b63b2af23162d7e4aefeffb3a1690f14--birding-birds-beautiful.jpg",
+"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Bird_Diversity_2013.png/300px-Bird_Diversity_2013.png",
+"https://insider.si.edu/wp-content/uploads/2017/04/SCTA-copy.jpg"
+,  "https://cdn.discordapp.com/attachments/399416520297676801/844911893793472522/qm0b29l7gy651.gif",
     "https://cdn.discordapp.com/attachments/399416520297676801/844907250006360114/20210516_161050.gif",
     "https://cdn.discordapp.com/attachments/399416520297676801/838046436548673566/186.gif",
     "https://cdn.discordapp.com/attachments/399416520297676801/838046412579143680/185.gif",
@@ -2587,12 +2598,14 @@ if(page > pageArr.length) {
 }
 page = page -1;
 var p = 0;
+var shsrc;
 for (var src of pageArr[page]) {
   p+=1;
+  shsrc = src;
 	var d23 = document;
 	var div = d23.createElement('div');
 	div.id = 'imgbox';
-	var data = `<object data="${src}"></object><div id="nav"><ul><a  href="${src}"><li><ion-icon name="share-alt"></ion-icon></li></a><li><ion-icon name="link"></ion-icon></li><a href="/download/${page}/${p}" target="_blank"><li><ion-icon name="cloud-download"></ion-icon></li></a></ul></div>`;
+	var data = `<object data="${src}"></object><div id="nav"><ul><a  href="${src}"><li><ion-icon name="share-alt"></ion-icon></li></a><a href="/download/${page}/${p}" target="_blank"><li><ion-icon name="cloud-download"></ion-icon></li></a></ul></div>`;
 	div.innerHTML = data;
 	var box = d23.getElementById('box');
 	box.appendChild(div);
