@@ -16,9 +16,8 @@ app.get('/download/:id/:page', (req, res) => {
   if(url.startsWith('https:')) {
     download = https;
   }
-  var form = url.split('.')[-1];
   res.set({
-    'Content-Disposition': `attachment; filename=${id}_${file}.${form}`
+    'Content-Disposition': `attachment; filename=${id}_${file}`
   });
   download.get(url, (f) => {
     f.pipe(res);
