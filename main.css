@@ -41,6 +41,8 @@ object {
   margin-top: 5px;
   margin-bottom: 5px;
   gap: 3px;
+  min-height: 40%;
+  min-width: 96%;
 }
 #nav {
   background: #e1f7f5;
