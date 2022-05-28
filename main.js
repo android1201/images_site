@@ -2589,7 +2589,6 @@ for(var i = 0; i <= img.database.length; i+=10) {
    let da = img.database.slice(i, i+10);
    pageArr.push(da);
 };
-
 if(page < 1) {
     page = 1;
 }
@@ -2610,3 +2609,39 @@ for (var src of pageArr[page]) {
 	var box = d23.getElementById('box');
 	box.appendChild(div);
 };
+let div2 = document.getElementById('slider');
+let ul = document.createElement('ul');
+ul.innerHTML = `
+        <li onclick="gofirst();">
+            <ion-icon name="rewind"></ion-icon>
+        </li>
+        <li onclick="gobackword();">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </li>
+        <li onclick="goforward();">
+            <ion-icon name="arrow-round-forward"></ion-icon>
+        </li>
+        <li onclick="golast();">
+            <ion-icon name="fastforward"></ion-icon>
+        </li>`;
+div2.appendChild(ul);
+function golast() {
+  var curwin = window.location.href;
+  var npv = pageArr.length;
+  var win = curwin.split('.repl.co')[0];
+  var newurl = win + '.repl.co/?page=' + npv;
+  window.location.href = newurl;
+}
+function gofirst() {
+  var curwin = window.location.href;
+  var npv = 1;
+  var win = curwin.split('.repl.co')[0];
+  var newurl = win + '.repl.co/?page=' + npv;
+  window.location.href = newurl;
+}
+function goforward() {
+  
+}
+function gobackword() {
+  
+}

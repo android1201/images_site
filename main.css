@@ -8,9 +8,11 @@ body {
   justify-content: center;
   align-items: center;
   background: #5e5e5e;
+  flex-direction: column;
 }
 #box {
-  height: 90%;
+  margin-top: 1%;
+  height: 91%;
   width: 95%;
   background: #adadad;
   overflow-x: auto;
@@ -61,4 +63,21 @@ li {
 }
 ion-icon {
   font-size: 1.45em;
+}
+#slider {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 7%;
+  width: 95%;
+  border-radius: 10px;
+  background: #abb8c9;
+}
+a {
+  color: #d1cfcf;
+}
+a:visited {
+  color: #e7f0bd;
+}
+a:active {
+  color: #d4d0c7;
 }
